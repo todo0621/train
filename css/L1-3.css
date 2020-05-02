@@ -1,0 +1,182 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* 以上為css reset */
+body{
+  font-family:Arial, Helvetica, sans-serif,微軟正黑體;
+}
+.wrap{
+    
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* 表頭開始 */
+.header h1{
+    font-size: 80px;
+    border-bottom: 2px solid black;
+    line-height: 1.1em;
+    padding: 48px 0px 30px 0px; /*天地留白*/
+}
+.header img{
+    margin: 48px 0px 53px 0px; /*天地留白*/
+}
+/* 表頭結束 */
+/* 資料開始 */
+.info h2,.school h2,.experience h2{
+    font-size:32px;
+    border-bottom: 1px solid black;
+    line-height: 1.5em;
+    font-weight: bold;
+}
+.info span,.school span,.experience span{
+    font-size: 24px;
+    vertical-align: middle;
+    color: #A00404;
+}
+.info p{
+    font-size: 24px;
+    line-height: 1.5em;
+}
+.name ,.school{
+    padding-top:15px;
+    margin-left: 45px;
+}
+.name li{
+    padding-bottom:15px ;
+}
+.name{
+    padding-bottom: 55px;/*個人資料與學歷的留白*/
+    position: relative;
+}
+.name::before{
+    content: "";
+    display: inline-block;
+    width:16px ;
+    height: 16px;
+    background:#96A9C4;
+    position: absolute;
+    top: 23px;
+    left:-30px;
+    border-radius: 50%;
+}
+.school{
+    padding-bottom: 40px;/*學歷底留白*/
+}
+.school p{
+    padding-bottom: 30px;
+}
+.school li{
+    position: relative;
+}
+.school li p::before{ /*圓形*/
+    content: "";
+    display: inline-block;
+    width:16px ;
+    height: 16px;
+    background:#96A9C4;
+    position: absolute;
+    top: 10px;
+    left:-30px;
+    border-radius: 50%;
+}
+.school li::before{ /*直線*/
+    content: "";
+    display: block;
+    height: 100%;
+    background:#96A9C4;
+    width: 1px;
+    top:-50px;
+    left: -23px;
+    position: absolute;
+}
+.school li:first-child::before{
+    height: 0; /*把線段上面的清掉*/
+}
+/* 資料結束 */
+/* 技能開始 */
+.skill::after{ /*用偽元素做背景滿版長方形*/
+    content: "";
+    display: block;
+    width: 999999px;
+    height: 360px;
+    background: #96A9C4;
+    position: absolute;
+    top:50%;
+    left: -999px;
+    transform: translateY(-50%);/*垂直置中*/
+    z-index: -1;
+}
+.skill{ /*表尾也是共同元素*/
+    background: #415165;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.skill-box{
+    width: 84%;
+    margin: 0 auto;
+}
+.skill h2{
+    font-size:32px ;
+    font-weight: bold;
+    padding: 24px 0px 8px 0px;
+    border-bottom:1px solid white ;
+}
+.skill span{
+    font-size: 24px;
+    vertical-align: middle;
+}
+.skill ul{
+    padding: 40px 0px 56px 0px;/*天地留白*/
+}
+.skill ul li{
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 2em;
+    border-left: 1px solid white;
+    width: 25%;
+}
+/* 技能結束 */
+/* 工作經驗開始 */
+.experience{
+    padding: 72px 0px;/*地留白*/
+}
+.experience ul{
+    width: 54%;
+    border-left: 1px solid#96A9C4;
+    padding-left: 30px ;
+    margin: 16px 0px 0px 25px; /*內留白*/
+}
+.experience h3{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2.4em;
+}
+.experience p{
+    font-size: 20px;
+    line-height: 1.6em;
+    padding-top: 5px;
+}
+/* 工作經驗結束 */
+/* 表尾開始 */
+.footer .skill-box li{
+    border-left:none ;
+    width: 60%;
+}
+.footer li img{
+    margin: 10px 7px ;
+}
+.footer h4 a{
+  color:white;
+  text-decoration: none;
+}
+.footer h4 a:hover{
+  color:pink;
+}
+/* 表尾結束 */

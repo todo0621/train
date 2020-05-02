@@ -1,0 +1,89 @@
+/* 已經使用 CSS reset */
+*{
+  box-sizing: border-box;
+}
+
+body{
+  /* Roboto 使用 googlefont，微軟正黑體和 sans-serif 是瀏覽器預設就有的字體喔! */
+  font-family: '微軟正黑體' , 'Roboto', sans-serif ;
+  
+}
+
+/* 最外圍 section 區域  =========== */
+.works{
+/*   文字置中 */
+  text-align: center;
+  background-image: url('https://upload.cc/i1/2020/04/20/i4nKva.png');
+  background-size: cover;
+  width: 100%;
+}
+
+/* 外容器 =========== */
+.container{
+  /*控制寬度 100%，最大為1200px*/
+  width: 100%;
+  max-width: 1200px;
+  /*margin 左右都設定 auto 可以置中。( 必須要設定寬度才有效果 ) */
+  margin: 0 auto;
+/*  上面是縮寫，等同與 margin: 0 auto 0 auto */
+  
+/* 設定容器邊界~ */
+  padding: 64px 0 120px;
+}
+
+/*這裡是縮小時，內容不想碰到視窗邊緣而設定的*/
+@media screen and (max-width:1200px){
+  .container{
+    padding: 0 15px;
+  }
+}
+
+/* 標題 =========== */
+.works h2{
+/*   文字大小設定 ps. 建議可以使用 rem 喔! 瀏覽器預設字體大小為16px，這邊就是 4rem */
+  font-size: 64px;
+  line-height: 75px;
+  font-weight: 900;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+/* 次標題 =========== */
+.works h3,
+.imgWrap p{
+/*   同上面 */
+  font-size: 20px;
+  line-height: 42px;
+  font-weight: 500;
+}
+.works h3{
+  margin-bottom: 24px;
+}
+
+/* 圖片區域外容器(包含文字) */
+.works .imgWrap{
+  width: 100%;
+  display: flex;
+  /* 可以換成space-between感受一下? */
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+/*   設定最大寬度後，縮小畫面才可以容納在視窗裡面 */
+.works img{
+  width: 100%;
+}
+.img-width-384 img{
+  max-width: 384px;
+  height: auto;
+}
+.img-width-588 img{
+  max-width: 588px;
+  height: auto;
+}
+
+/* 圖片說明 ( 因為與次標題樣式相同，所以也可以直接共用 class 喔 ) */
+.imgWrap p{
+  color: #fff;
+  margin: 16px 0;
+}
